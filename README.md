@@ -30,7 +30,7 @@ git clone git@github.com:DataVault/datavault-vagrant-ubuntu.git
 cd datavault-vagrant-ubuntu
 ```
 
-You'll have to update the Vagrantfile to point at your datavault project director.
+You'll have to update the Vagrantfile to point at your datavault project directory.
 Change this line in the `Vagrantfile`:
 
 
