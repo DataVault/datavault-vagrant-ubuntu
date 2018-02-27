@@ -50,6 +50,11 @@ Vagrant.configure("2") do |config|
     rsync__auto: true,
     rsync__args: ["--verbose", "--rsync-path='sudo rsync'", "--archive", "--delete", "-z", "--owner=vagrant", "--group=vagrant" ],
     rsync__verbose: true
+  config.vm.synced_folder "./bin", "/home/ubuntu/bin",
+    type: "rsync",
+    rsync__auto: true,
+    rsync__args: ["--verbose", "--rsync-path='sudo rsync'", "--archive", "--delete", "-z", "--owner=vagrant", "--group=vagrant" ],
+    rsync__verbose: true
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
