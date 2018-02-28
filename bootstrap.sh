@@ -71,4 +71,4 @@ sudo dpkg -i tivsm-ba.amd64.deb
 sudo dpkg -i tivsm-bacit.amd64.deb
 sudo dpkg -i tivsm-bahdw.amd64.deb
 
-rm /tmp/tsminstall
+rm -r /tmp/tsminstall
