@@ -50,12 +50,12 @@ Vagrant.configure("2") do |config|
     rsync__auto: true,
     rsync__args: ["--verbose", "--rsync-path='sudo rsync'", "--archive", "--delete", "-z", "--owner=vagrant", "--group=vagrant" ],
     rsync__verbose: true
-  config.vm.synced_folder "./bin", "~/bin",
+  config.vm.synced_folder "./bin", "/home/vagrant/bin",
     type: "rsync",
     rsync__auto: true,
     rsync__args: ["--verbose", "--rsync-path='sudo rsync'", "--archive", "--delete", "-z", "--owner=vagrant", "--group=vagrant" ],
     rsync__verbose: true
-  config.vm.synced_folder "./TSM_OPT_FILES", "~/TSM_OPT_FILES",
+  config.vm.synced_folder "./TSM_OPT_FILES", "/home/vagrant/TSM_OPT_FILES",
     type: "rsync",
     rsync__auto: true,
     rsync__args: ["--verbose", "--rsync-path='sudo rsync'", "--archive", "--delete", "-z", "--owner=vagrant", "--group=vagrant" ],
