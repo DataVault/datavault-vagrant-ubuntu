@@ -58,3 +58,17 @@ mkdir -p /tmp/datavault/archive
 mkdir -p /tmp/datavault/temp
 # A directory for storing archive metadata
 mkdir -p /tmp/datavault/meta
+
+mkdir -p /tmp/tsminstall
+cd /tmp/tsminstall
+wget ftp://public.dhe.ibm.com/storage/tivoli-storage-management/maintenance/client/v7r1/Linux/LinuxX86_DEB/BA/v718/7.1.8.0-TIV-TSMBAC-LinuxX86_DEB.tar
+tar xvf 7.1.8.0-TIV-TSMBAC-LinuxX86_DEB.tar
+cd 7.1.8.0-TIV-TSMBAC-LinuxX86_DEB
+sudo dpkg -i gskcrypt64_8.0-50.40.linux.x86_64.deb gskssl64_8.0-50.40.linux.x86_64.deb
+sudo dpkg -i tivsm-api64.amd64.deb
+sudo dpkg -i tivsm-apicit.amd64.deb
+sudo dpkg -i tivsm-ba.amd64.deb
+sudo dpkg -i tivsm-bacit.amd64.deb
+sudo dpkg -i tivsm-bahdw.amd64.deb
+
+rm /tmp/tsminstall
