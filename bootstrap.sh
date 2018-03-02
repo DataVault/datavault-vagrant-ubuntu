@@ -71,3 +71,8 @@ sudo dpkg -i tivsm-bacit.amd64.deb
 sudo dpkg -i tivsm-bahdw.amd64.deb
 
 rm -r /tmp/tsminstall
+
+sudo cp /home/vagrant/TSM_OPT_FILES/dsm1.opt /opt/tivoli/tsm/client/ba/bin/.
+sudo cp /home/vagrant/TSM_OPT_FILES/dsm2.opt /opt/tivoli/tsm/client/ba/bin/.
+sudo cp /home/vagrant/TSM_OPT_FILES/dsm.sys /opt/tivoli/tsm/client/ba/bin/.
+sudo cp /opt/tivoli/tsm/client/ba/bin/dsm1.opt /opt/tivoli/tsm/client/ba/bin/dsm.opt
