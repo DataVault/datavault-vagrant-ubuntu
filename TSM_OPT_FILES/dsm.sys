@@ -1,0 +1,48 @@
+************************************************************************
+* IBM Tivoli Storage Manager                                           *
+*                                                                      *
+* Sample Client System Options file for UNIX (dsm.sys.smp)             *
+************************************************************************
+
+*  This file contains the minimum options required to get started
+*  using TSM.  Copy dsm.sys.smp to dsm.sys.  In the dsm.sys file,
+*  enter the appropriate values for each option listed below and
+*  remove the leading asterisk (*) for each one.
+
+*  If your client node communicates with multiple TSM servers, be
+*  sure to add a stanza, beginning with the SERVERNAME option, for
+*  each additional server.
+
+************************************************************************
+
+* SErvername  server_a
+Servername  server_a
+   COMMMethod         TCPip
+   TCPPort            1500
+   TCPServeraddress   admin09.ecdf.ed.ac.uk
+
+* nodename        lac-vault-test1.is.ed.ac.uk
+nodename	DLIB-SIDLAWS
+
+tcpwindowsize   63
+tcpbuffsize     32
+txnbytelimit    25600
+
+* dedupl          yes
+* compression     on
+passwordaccess  generate
+
+* schedlogname    /opt/tivoli/tsm/client/ba/bin/dsmsched.log
+schedlogname    /tmp/dsmsched.log
+* errorlogname    /opt/tivoli/tsm/client/ba/bin/dsmerror.log
+errorlogname	/tmp/dsmerror.log
+schedlogret     14 d
+errorlogret     14 d
+
+* Saveset List:
+
+domain /
+
+* Exclusions:
+
+exclude.dir /tmp
